@@ -1,0 +1,41 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "GET",
+        "url": "/omcoreapis/1.0.2/mp/paymentstatus/mock_pay_token",
+        "headers": {
+            "Authorization": {
+                "matches": "Bearer mock_access_token"
+            },
+            "X-AUTH-TOKEN": {
+                "matches": "AZERTY1234567890"
+            },
+            "Content-Type": {
+                "contains": "application/json"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "message": "Payment status retrieved successfully",
+            "data": {
+                "id": "TXN0001",
+                "channelUserMsisdn": "650000000",
+                "subscriberMsisdn": "690055001",
+                "amount": "500",
+                "payToken": "mock_pay_token",
+                "status": "PENDING",
+                "txnid": "mock.pay.token",
+                "orderId": "Testuser",
+                "inittxnmessage": "Payment done. The customer will have to confirm the payment by entering his PING and then you will recieve an SMS. Thanks you for using Orange Money service.",
+                "description": "mppay",
+                "createTime": "175489652"
+            }
+        }
+    }
+}

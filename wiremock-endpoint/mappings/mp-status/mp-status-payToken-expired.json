@@ -1,0 +1,28 @@
+{
+    "priority": 4,
+    "request": {
+        "method": "GET",
+        "url": "/omcoreapis/1.0.2/mp/paymentstatus/expired_pay_token",
+        "headers": {
+            "Authorization": {
+                "matches": "Bearer mock_access_token"
+            },
+            "X-AUTH-TOKEN": {
+                "matches": "AZERTY1234567890"
+            },
+            "Content-Type": {
+                "contains": "application/json"
+            }
+        }
+    },
+    "response": {
+        "status": 401,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "error": "Unauthorized",
+            "message": "Your payToken in request is expired"
+        }
+    }
+}

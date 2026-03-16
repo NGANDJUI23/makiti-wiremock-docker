@@ -1,0 +1,26 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "POST",
+        "url": "/omcoreapis/1.0.2/mp/init",
+        "headers": {
+            "Authorization": {
+                "matches": "Bearer mock_access_token"
+            },
+            "X-AUTH-TOKEN": {
+                "matches": "AZERTY1234567890"
+            },
+            "Content-Type": {
+                "contains": "application/json"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": "{ \"message\": \"Merchant payment request successfully\", \"data\": { \"payToken\": \"MP{{randomValue length=16 type='ALPHANUMERIC'}}\" } }"
+    }
+}

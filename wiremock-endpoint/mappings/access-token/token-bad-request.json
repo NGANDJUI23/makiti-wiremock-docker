@@ -1,0 +1,27 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPattern": "/.*",
+    "headers": {
+      "Content-Type": {
+        "doesNotContain": "application/x-www-form-urlencoded"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "doesNotContain": "grant_type=client_credentials"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "Bad Request",
+      "message": "Missing required parameters"
+    }
+  }
+}

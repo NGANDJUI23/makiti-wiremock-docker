@@ -1,0 +1,30 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "url": "/token",
+    "headers": {
+      "Authorization": {
+        "doesNotMatch": "Basic TUFLSVRJOnBhc3N3b3Jk"
+      },
+      "Content-Type": {
+        "contains": "application/x-www-form-urlencoded"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "contains": "grant_type=client_credentials"
+      }
+    ]
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "Unauthorized",
+      "message": "Invalid credentials"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "priority": 2,
+    "request": {
+        "method": "GET",
+        "urlPattern": "/omcoreapis/1.0.2/mp/paymentstatus/.*",
+        "headers": {
+            "Authorization": {
+                "matches": "Bearer expired_mock_access_token"
+            },
+            "X-AUTH-TOKEN": {
+                "matches": "AZERTY1234567890"
+            },
+            "Content-Type": {
+                "contains": "application/json"
+            }
+        }
+    },
+    "response": {
+        "status": 401,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "error": "Unauthorized",
+            "message": "Token expired"
+        }
+    }
+}

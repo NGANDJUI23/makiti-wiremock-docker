@@ -1,0 +1,25 @@
+{
+    "priority": 10,
+    "request": {
+        "method": "POST",
+        "urlPattern": "/.*",
+        "headers": {
+            "Content-Type": {
+                "contains": "application/json"
+            }
+        },
+        "bodyPatterns": [
+        
+        ]
+    },
+    "response": {
+        "status": 400,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "error": "Bad Request",
+            "message": "Missing required parameters"
+        }
+    }
+}
