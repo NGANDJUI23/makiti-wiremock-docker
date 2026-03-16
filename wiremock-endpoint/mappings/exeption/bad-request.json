@@ -1,0 +1,21 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPattern": "/omcoreapis/1.0.2/mp/init|/token|/omcoreapis/1.0.2/mp/paymentstatus/.*|/omcoreapis/1.0.2/mp/pay",
+    "headers": {
+      "Authorization": {
+        "absent": true
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "Bad Request",
+      "message": "Missing Authorization header"
+    }
+  }
+}

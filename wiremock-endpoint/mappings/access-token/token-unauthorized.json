@@ -24,7 +24,7 @@
     },
     "jsonBody": {
       "error": "Unauthorized",
-      "message": "Invalid credentials"
+      "message": "Unauthorized, Your are not allowed to use this resource with the credentials provided"
     }
   }
 }

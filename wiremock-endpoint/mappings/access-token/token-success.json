@@ -5,8 +5,8 @@
     "url": "/token",
     "headers": {
       "Authorization": {
-        "equalTo": "Basic TUFLSVRJOnBhc3N3b3Jk"
-      },
+        "matches": "Basic (TUFLSVRJOnBhc3N3b3Jk|TUFLSVRJMjpwYXNzd29yZA==)"
+    },
       "Content-Type": {
         "contains": "application/x-www-form-urlencoded"
       }
@@ -19,14 +19,10 @@
   },
   "response": {
     "status": 200,
+    "transformers": ["response-template"],
     "headers": {
       "Content-Type": "application/json"
     },
-    "jsonBody": {
-      "access_token": "mock_access_token",
-      "token_type": "Bearer",
-      "expires_in": 3600,
-      "scope": "payments"
-    }
+    "body": "{ \"access_token\": \"{{randomValue type='UUID'}}\", \"token_type\": \"Bearer\", \"expires_in\": 3600, \"scope\": \"am_application_scope defaults\" }"
   }
 }

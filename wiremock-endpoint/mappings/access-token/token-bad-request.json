@@ -2,7 +2,7 @@
   "priority": 10,
   "request": {
     "method": "POST",
-    "urlPattern": "/.*",
+    "urlPattern": "/token",
     "headers": {
       "Content-Type": {
         "doesNotContain": "application/x-www-form-urlencoded"

@@ -2,7 +2,7 @@
     "priority": 10,
     "request": {
         "method": "GET",
-        "urlPattern": "/.*",
+        "urlPattern": "/omcoreapis/1.0.2/mp/paymentstatus/mock_pay_token",
         "headers": {
             "Content-Type": {
                 "contains": "application/json"

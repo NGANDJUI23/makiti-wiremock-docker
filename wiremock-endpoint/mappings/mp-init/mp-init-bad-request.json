@@ -2,7 +2,7 @@
     "priority": 10,
     "request": {
     "method": "POST",
-    "urlPattern": "/.*"
+    "urlPattern": "/omcoreapis/1.0.2/mp/init"
     },
     "response": {
         "status": 400,

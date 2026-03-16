@@ -1,0 +1,16 @@
+{
+  "priority": 11,
+  "request": {
+    "urlPattern": "/.*"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "URL Not Found",
+      "message": "The requested URL was not found on the server"
+    }
+  }
+}
