@@ -1,7 +1,7 @@
 {
   "priority": 1,
   "request": {
-    "urlPattern": "/omcoreapis/1.0.2/mp/init|/token|/omcoreapis/1.0.2/mp/paymentstatus/.*|/omcoreapis/1.0.2/mp/pay",
+    "urlPattern": "/omcoreapis/1.0.2/mp/init|/omcoreapis/1.0.2/mp/paymentstatus/.*|/omcoreapis/1.0.2/mp/pay",
     "headers": {
       "X-AUTH-TOKEN": {
         "absent": true
